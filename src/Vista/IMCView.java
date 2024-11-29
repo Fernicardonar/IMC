@@ -7,6 +7,8 @@ package Vista;
 /**
  *author Fernando Carodna
  */
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
@@ -18,7 +20,7 @@ public class IMCView extends JFrame {
     
     public IMCView() {
         setTitle("Calculadora de IMC");
-        setSize(300, 200);
+        setSize(350, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         JPanel panel = new JPanel();
@@ -47,7 +49,16 @@ public class IMCView extends JFrame {
         
         resultadoLabel = new JLabel("");
         resultadoLabel.setBounds(10, 110, 300, 25);
+        resultadoLabel.setForeground(Color.BLUE);
+        resultadoLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        resultadoLabel.setHorizontalAlignment(JLabel.CENTER);
+        resultadoLabel.setOpaque(true);
+        resultadoLabel.setBackground(Color.LIGHT_GRAY);
         panel.add(resultadoLabel);
+        
+        /**resultadoLabel = new JLabel("");
+        resultadoLabel.setBounds(10, 110, 300, 25);
+        panel.add(resultadoLabel);**/
         
         setVisible(true);
     }
